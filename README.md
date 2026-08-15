@@ -1,537 +1,448 @@
-# PaySaathi 💼
+Yes — understood. You want a **pure professional GitHub project README**, with **no hackathon/team/pitch language**, written like a serious software project that adds value to your GitHub and resume.
 
+Copy-paste this directly:
 
-## Know Your Salary. Verify Your Salary.
+````markdown
+# PaySaathi
 
+## Worker-First Salary Verification & Salary Intelligence Platform
 
-> **Your job changes. Your salary profile doesn't.**
+PaySaathi is a worker-first web platform that helps users understand their expected salary, analyse payslips, compare expected and received pay, identify potential discrepancies, and maintain a portable digital salary history.
 
-
-PaySaathi is a worker-first salary intelligence platform that helps workers understand what they should earn, verify what they actually received, and build a portable Salary Passport across jobs.
-
-
-Built for **LTHackfest 2026**.
-
+The platform combines salary calculation, document analysis, salary verification, worker profiles, and a digital Salary Passport into a single user-focused experience.
 
 ---
 
+## Overview
 
-## 🏆 LTHackfest 2026
+Salary information is often distributed across payslips, job records, working hours, overtime, shift information, and deductions.
 
+PaySaathi provides a unified workflow for understanding this information.
 
-### Team PaySaathi
+The platform supports two primary use cases:
 
+### Before Receiving Salary
 
-**Aarthi L · Kayalvizhi J · Yashaswini M · Harini S**
+A user can enter their:
 
+- Job role
+- Location
+- Working days
+- Working hours
+- Overtime
+- Night-shift information
+
+The system calculates an indicative expected salary based on the provided work conditions.
+
+### After Receiving Salary
+
+A user can upload a payslip and review:
+
+- Basic salary
+- Overtime
+- Allowances
+- Deductions
+- Net salary
+- Expected salary
+- Actual salary
+- Potential discrepancies
+
+The resulting record can be saved into the user's Salary Passport.
 
 ---
 
+# Key Features
 
-## 🔴 The Problem
+## Expected Salary Calculator
 
+Users can provide work-related information and receive an indicative salary estimate.
 
-For many workers, getting paid is not the same as understanding their pay.
+### Inputs
 
-
-Salary can depend on:
-
-
+- Worker type
+- Location
+- Working days
 - Working hours
 - Overtime
 - Night shifts
-- Job role
-- Location
-- Allowances
-- Deductions
 
+### Output
 
-Yet workers often struggle to answer simple questions:
-
-
-> **What should I earn?**
-
-
-> **Was my overtime included?**
-
-
-> **Why was this amount deducted?**
-
-
-> **Is the salary I received consistent with my work?**
-
-
-When workers change jobs, employers, or cities, their salary records can also become scattered across different payslips.
-
-
-### The gap is not simply payment.
-
-
-### The gap is understanding, verification, and continuity.
-
+The platform provides an estimated expected-pay value based on the configured calculation logic.
 
 ---
 
+## Payslip Upload & Analysis
 
-# 🟢 Our Solution — PaySaathi
+Users can upload salary documents in common formats:
 
+- PDF
+- PNG
+- JPG
+- JPEG
 
-PaySaathi brings the complete salary journey into one worker-first platform.
+The upload interface supports file selection and drag-and-drop interactions.
 
+The analysis workflow is designed to extract structured salary information from uploaded documents.
+
+---
+
+## Salary Breakdown
+
+PaySaathi organizes salary information into understandable components.
 
 ```text
-UNDERSTAND
-     ↓
-EXPECT
-     ↓
-VERIFY
-     ↓
-SAVE
-     ↓
-CARRY FORWARD
-Before getting paid
-
-Workers can enter their job and working conditions to understand an indicative expected pay.
-
-After getting paid
-
-Workers can upload their payslip and analyse:
-
-Salary
-Overtime
-Night shifts
-Allowances
-Deductions
-Net pay
-Over time
-
-Verified records can be saved into a Salary Passport, creating a portable salary history across jobs.
-
-🪪 Salary Passport
-Your job changes. Your salary profile doesn't.
-
-The Salary Passport is PaySaathi's signature concept.
-
-It allows workers to build a continuous record of their salary journey.
-
-It can contain:
-
-Job history
-Salary records
-Payslips
-Working conditions
-Overtime
-Verification history
-Potential issues
-Example
-Construction Worker
-₹15,000
-      ↓
-Security Guard
-₹18,500
-      ↓
-Factory Worker
-₹22,000
-
-Instead of losing salary information whenever a job changes, the worker carries their salary journey forward.
-
-⚙️ How It Works
-1. CHOOSE
-   Select your worker type
-
-
-        ↓
-
-
-2. ENTER
-   Add location, hours, shifts and overtime
-
-
-        ↓
-
-
-3. EXPECT
-   Understand indicative expected pay
-
-
-        ↓
-
-
-4. UPLOAD
-   Add your payslip
-
-
-        ↓
-
-
-5. ANALYSE
-   Extract salary and deduction information
-
-
-        ↓
-
-
-6. VERIFY
-   Compare expected and actual pay
-
-
-        ↓
-
-
-7. UNDERSTAND
-   Receive simple explanations
-
-
-        ↓
-
-
-8. SAVE
-   Add the record to your Salary Passport
-👷 Designed Around Different Workers
-
-PaySaathi adapts the experience to different work patterns.
-
-Construction Workers
-Daily wages
-Working days
-Overtime
-Night work
-Security Workers
-Day shifts
-Night shifts
-Working hours
-Overtime
-Monthly salary
-Factory Workers
-Base salary
-Shifts
-Overtime
-Allowances
-Deductions
-Gig / Delivery Workers
-Working days
-Deliveries
-Hours
-Incentives
-Deductions
-Service Workers
-Working hours
-Working days
-Overtime
-Monthly pay
-✨ Key Features
-01 — Expected Salary Check
-
-Workers can enter:
-
-Job
-+
-Location
-+
-Working Days
-+
-Working Hours
-+
-Overtime
-+
-Night Shift
-
-and receive an indicative expected-pay calculation.
-
-02 — Payslip Verification
-
-Upload:
-
-PDF
-JPG
-JPEG
-PNG
-
-PaySaathi extracts relevant salary information and presents it in an understandable format.
-
-03 — Salary Breakdown
 Basic Pay
 + Overtime
 + Allowances
 - Deductions
 ----------------
 Net Pay
+````
 
-The worker can see how the final salary was calculated.
-
-04 — Overtime & Shift Analysis
-
-PaySaathi considers work conditions such as:
-
-Overtime
-Night shifts
-Working hours
-Working days
-
-to provide a clearer salary picture.
-
-05 — Salary Passport
-
-Build a portable salary history across:
-
-Jobs
-Employers
-Locations
-Pay periods
-06 — Worker Dashboard
-
-A simple overview of:
-
-Expected salary
-Actual salary
-Overtime
-Verification status
-Recent payslips
-Salary history
-Potential issues
-07 — Multilingual Experience
-
-Designed with local-language accessibility in mind.
-
-Prototype language support includes:
-
-English
-Tamil
-Hindi
-08 — Voice Accessibility
-
-Important salary explanations can be read aloud using browser-based speech synthesis.
-
-This makes the experience more accessible for users who prefer listening over reading.
-
-09 — Complaint Draft
-
-When a potential discrepancy is identified, PaySaathi can generate a structured complaint draft using the available information.
-
-Draft for review — not legal advice.
-
-🧠 Technology Stack
-Frontend
-React
-TypeScript
-Next.js / Vite
-Tailwind CSS
-Motion & Interaction
-Framer Motion
-CSS animations
-CSS 3D transforms
-SVG animations
-Micro-interactions
-Document Processing
-PDF upload
-Image upload
-OCR-ready architecture
-Payslip data extraction
-Data
-Client-side state management
-LocalStorage-based prototype persistence
-Structured salary records
-Accessibility
-Web Speech API
-Multilingual interface
-Responsive design
-Keyboard-friendly interactions
-🏗️ System Architecture
-                         PAYSAATHI
-                             │
-              ┌──────────────┼──────────────┐
-              │              │              │
-              ▼              ▼              ▼
-        SALARY CHECK    PAYSLIP VERIFY   DASHBOARD
-              │              │              │
-              ▼              ▼              ▼
-        Work Details     PDF / Image    Salary Records
-              │              │              │
-              └──────────────┼──────────────┘
-                             ▼
-                    VERIFICATION ENGINE
-                             │
-                    ┌────────┴────────┐
-                    ▼                 ▼
-               EXPECTED PAY      ACTUAL PAY
-                    │                 │
-                    └────────┬────────┘
-                             ▼
-                     SALARY PASSPORT
-                             │
-                             ▼
-                       WORKER HISTORY
-🎯 Hackathon Demo Flow
+This makes it easier to understand how the final salary amount is composed.
 
-The complete product can be demonstrated in approximately 60–90 seconds:
+---
 
-Landing Page
-     ↓
-Workers
-     ↓
-Select Security Worker
-     ↓
-Enable Night Shift
-     ↓
-Check Expected Pay
-     ↓
-Upload Sample Payslip
-     ↓
-Analyse Payslip
-     ↓
-View Verification Result
-     ↓
-Save to Salary Passport
-     ↓
-Open Dashboard
-     ↓
-View Updated Salary Passport
-🎨 Product Experience
+## Expected vs Actual Salary
 
-PaySaathi is designed to feel different from conventional payroll software.
+The platform compares the user's expected salary information with the salary represented in the uploaded payslip.
 
-The experience combines:
+Example:
 
-Human-centered design
-Premium product UI
-Motion-driven storytelling
-Interactive salary visualizations
-Salary Passport visual metaphor
-Accessible language
-Voice interaction
-Worker-specific experiences
+```text
+Expected Pay       ₹XX,XXX
+Actual Pay         ₹XX,XXX
+Difference         ₹X,XXX
+```
 
-The visual identity intentionally avoids a generic blue-heavy fintech appearance.
+The system can highlight potential discrepancies that require further review.
 
-The design focuses on a distinctive combination of:
+---
 
-Warmth · Trust · Clarity · Motion · Accessibility
+## Overtime & Shift Analysis
 
-🌍 Impact
+Work conditions can be included in the salary analysis.
 
-PaySaathi aims to make salary information easier to understand and act upon.
+Supported factors include:
 
-Worker Empowerment
+* Working hours
+* Working days
+* Overtime
+* Night shifts
+* Shift-based work
 
-Help workers understand their own salary information.
+This provides additional context when analysing salary information.
 
-Wage Awareness
+---
 
-Make expected-pay information easier to access.
+# Salary Passport
 
-Evidence
+## Portable Salary History
 
-Help organize payslips and salary records.
+The Salary Passport is a central feature of PaySaathi.
 
-Portability
+It allows users to maintain salary records across different jobs and locations.
 
-Create a continuous salary history across jobs.
+A Salary Passport record can contain:
 
-Accessibility
+* Job role
+* Employer information
+* Location
+* Salary
+* Working conditions
+* Overtime
+* Payslip
+* Verification status
+* Pay period
 
-Make salary information easier to consume through local languages and voice.
+Example:
 
-Ecosystem Insights
+```text
+Job 1
+   ↓
+Salary Record
+   ↓
+Job 2
+   ↓
+Salary Record
+   ↓
+Job 3
+   ↓
+Salary Record
+```
 
-Future privacy-preserving analytics could help identify broader wage patterns across sectors and regions.
+This creates a continuous salary history instead of treating each payslip as an isolated document.
 
-💼 Business Model
+---
 
-PaySaathi follows a worker-first, ecosystem-driven model.
+# Worker Profiles
 
-Free for Workers
+The platform supports salary workflows for different categories of workers.
 
-Core salary understanding and verification features remain accessible to workers.
+Examples include:
 
-NGO / Union Partnerships
+* Construction workers
+* Security workers
+* Factory workers
+* Gig and delivery workers
+* Service workers
 
-Subscription dashboards for organizations supporting workers.
+Worker-specific information can be used to adapt the salary calculation and verification workflow.
 
-CSR Programs
+---
 
-Enterprise-sponsored worker empowerment deployments.
+# Dashboard
 
-B2G
+The dashboard provides a centralized view of salary information.
 
-Potential licensing and deployment for government labour-support programs.
+It can display:
 
-🚀 Future Roadmap
-Phase 1 — Prototype
-Worker profiles
-Salary calculator
-Payslip upload
-Verification flow
-Salary Passport
-Dashboard
-Phase 2 — Pilot
-Improved OCR
-Verified wage-rule datasets
-More Indian languages
-Worker-support organization pilots
-Phase 3 — Scale
-NGO / union dashboards
-CSR deployments
-Government integrations
-Privacy-preserving wage analytics
-Broader worker portability
-🔐 Privacy & Responsible Technology
+* Expected salary
+* Actual salary
+* Overtime
+* Verification status
+* Recent payslips
+* Salary history
+* Potential discrepancies
+* Salary Passport records
+
+The dashboard acts as the user's primary salary information center.
+
+---
+
+# Multilingual Support
+
+PaySaathi is designed with multilingual accessibility in mind.
+
+The interface can support multiple languages, including:
+
+* English
+* Tamil
+* Hindi
+
+The architecture can be extended to additional regional languages.
+
+---
+
+# Voice Accessibility
+
+Important salary information can be converted into speech using the browser's Web Speech API.
+
+This provides an alternative interaction method for users who prefer audio-based explanations.
+
+Typical actions include:
+
+* Play
+* Pause
+* Resume
+* Stop
+
+---
+
+# Complaint Draft Generation
+
+When a potential salary discrepancy is identified, PaySaathi can generate a structured complaint draft using the available salary information.
+
+The generated content can be copied or exported for further review.
+
+> Generated complaints are drafts and are not legal advice.
+
+---
+
+# Application Workflow
+
+```text
+                    PAYSAATHI
+                        │
+                        ▼
+                Select Worker Type
+                        │
+                        ▼
+                 Enter Work Data
+                        │
+                        ▼
+                Calculate Expected Pay
+                        │
+                        ▼
+                  Upload Payslip
+                        │
+                        ▼
+                 Analyse Document
+                        │
+                        ▼
+               Extract Salary Data
+                        │
+                        ▼
+              Compare Salary Values
+                        │
+                        ▼
+               Verification Result
+                        │
+              ┌─────────┴─────────┐
+              ▼                   ▼
+        Save Salary Record    Complaint Draft
+              │
+              ▼
+         Salary Passport
+              │
+              ▼
+           Dashboard
+```
+
+---
+
+# Technical Architecture
+
+```text
+┌──────────────────────────────────────────┐
+│              Presentation Layer          │
+│       React / TypeScript / Next.js       │
+└───────────────────┬──────────────────────┘
+                    │
+          ┌─────────┼─────────┐
+          │         │         │
+          ▼         ▼         ▼
+      Salary     Payslip   Dashboard
+      Module     Module      Module
+          │         │         │
+          ▼         ▼         ▼
+      Work Data   Upload   Salary Records
+          │         │         │
+          └─────────┼─────────┘
+                    ▼
+             Analysis Layer
+                    │
+                    ▼
+          Verification Logic
+                    │
+             ┌──────┴──────┐
+             ▼             ▼
+       Expected Pay    Actual Pay
+             │             │
+             └──────┬──────┘
+                    ▼
+             Salary Passport
+                    │
+                    ▼
+              User History
+```
 
-Salary information is sensitive.
+---
 
-A production version of PaySaathi will prioritize:
+# Technology Stack
 
-Data minimization
-Encryption
-Consent
-Secure storage
-Access control
-User-controlled deletion
-Privacy-preserving analytics
+## Frontend
 
-The current project is a hackathon prototype using demonstration/local data.
+* React
+* TypeScript
+* Next.js / Vite
+* Tailwind CSS
 
-⚠️ Disclaimer
+## UI & Animation
 
-PaySaathi is currently a hackathon-stage prototype.
+* Framer Motion
+* CSS animations
+* CSS transforms
+* SVG animations
+* Responsive UI components
 
-Indicative salary calculations and demonstrations should not be treated as definitive legal or financial determinations.
+## Document Processing
 
-A potential discrepancy does not automatically mean an employer has violated the law.
+* PDF file handling
+* Image file handling
+* OCR-ready processing architecture
+* Structured salary extraction
 
-Complaint drafts generated by the prototype are for review and are not legal advice.
+## Browser APIs
 
-🛠️ Getting Started
-Prerequisites
-Node.js 18+
-npm
+* File API
+* Web Speech API
+* LocalStorage
 
-Check your versions:
+## Development Tools
 
-node -v
-npm -v
-Installation
+* Git
+* GitHub
+* npm
+* Modern JavaScript / TypeScript tooling
 
-Clone the repository:
+---
 
-git clone https://github.com/YOUR-USERNAME/paysaathi.git
+# Technical Implementation
 
-Navigate to the project:
+## Component-Based Architecture
 
-cd paysaathi
+The application is structured around reusable components for:
 
-Install dependencies:
+* Navigation
+* Worker profiles
+* Salary forms
+* Salary cards
+* File uploads
+* Verification results
+* Dashboard widgets
+* Salary Passport records
+* Interactive forms
 
-npm install
-Run Locally
-npm run dev
+This allows individual features to be developed and maintained independently.
 
-Open the local development URL displayed in your terminal.
+---
 
-📁 Project Structure
+## Client-Side Data Persistence
+
+For the prototype environment, salary records can be persisted using browser-based storage.
+
+This allows information created during the verification workflow to remain available across:
+
+* Dashboard
+* Salary Passport
+* Verification history
+
+A production version can replace this layer with a secure backend database.
+
+---
+
+## Responsive Interface
+
+The application is designed for multiple screen sizes:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+The interface adapts navigation, forms, cards, tables, and interactive elements according to viewport size.
+
+---
+
+## Motion & Interaction
+
+Motion is used to communicate application state and improve usability.
+
+Examples include:
+
+* Page transitions
+* Upload feedback
+* Verification progress
+* Salary number transitions
+* Timeline animations
+* Card interactions
+* Hover states
+* Dashboard transitions
+
+Animations are designed to complement the user workflow rather than replace functionality.
+
+---
+
+# Project Structure
+
+```text
 paysaathi/
 │
 ├── public/
-│   └── assets/
+│   ├── assets/
+│   └── sample-data/
 │
 ├── src/
 │   ├── components/
@@ -539,100 +450,286 @@ paysaathi/
 │   ├── sections/
 │   ├── hooks/
 │   ├── utils/
-│   └── data/
+│   ├── data/
+│   └── styles/
 │
 ├── package.json
 ├── README.md
 ├── .gitignore
 └── configuration files
-🧪 Demo Data
+```
 
-The prototype may contain sample workers and payslips for demonstration purposes.
+---
 
-Sample documents should always be clearly marked:
+# Installation
 
-DEMO DOCUMENT — NOT A REAL PAYSLIP
+## Prerequisites
 
-Never commit real payslips, personal financial information, API keys, passwords, or private credentials to the repository.
+* Node.js 18+
+* npm
 
-📊 Product Philosophy
+Verify the installation:
 
-PaySaathi is built around three simple questions:
+```bash
+node -v
+npm -v
+```
 
-BEFORE PAYMENT
+---
 
+## Clone the Repository
 
-“What should I earn?”
+```bash
+git clone https://github.com/YOUR-USERNAME/paysaathi.git
+```
 
+```bash
+cd paysaathi
+```
 
-        ↓
+---
 
+## Install Dependencies
 
-AFTER PAYMENT
+```bash
+npm install
+```
 
+---
 
-“What did I receive?”
+## Start the Development Server
 
+```bash
+npm run dev
+```
 
-        ↓
+Open the local development URL displayed by the development server.
 
+---
 
-OVER TIME
+# Environment Variables
 
+If external services are configured, create a local environment file:
 
-“What has my salary journey looked like?”
+```text
+.env.local
+```
 
-This creates:
+Example:
 
-EXPECT → VERIFY → REMEMBER
-💡 Why PaySaathi?
+```env
+NEXT_PUBLIC_API_URL=your_api_url
+```
 
-Traditional payroll platforms are primarily designed to help organizations manage payroll.
+Never commit sensitive credentials.
 
-PaySaathi starts from the other side:
+Do not upload:
 
-THE WORKER.
+```text
+.env
+.env.local
+API keys
+Secret tokens
+Passwords
+Private credentials
+```
 
-We are building around three moments:
+---
 
-Before payment
-Understand expected pay.
+# Example Salary Verification
 
-After payment
-Verify actual pay.
+```text
+Worker Type:
+Security Worker
 
-Across jobs
-Carry your salary history.
+Location:
+Tamil Nadu
 
-❤️ Our Vision
+Working Hours:
+10 hours/day
 
-Every worker deserves to understand their own salary.
+Night Shift:
+Enabled
 
-We envision a future where a worker's salary history is:
+Expected Pay:
+₹XX,XXX
 
-Understandable.
+Actual Pay:
+₹XX,XXX
 
-Portable.
+Overtime:
+₹X,XXX
 
-Accessible.
+Deductions:
+₹X,XXX
 
-Worker-controlled.
+Verification:
+Potential discrepancy detected
+```
 
-Not lost when a job ends.
+The values above are illustrative.
 
-Not buried inside complicated payroll systems.
+---
 
-Not dependent on understanding complex payslips.
+# Data Flow
 
-👥 Team
-PaySaathi — LTHackfest 2026
-Kayalvizhi J
-Aarthi L
-Yashaswini M
-Harini S
+```text
+User Input
+    │
+    ▼
+Work Profile
+    │
+    ▼
+Expected Salary Calculation
+    │
+    ▼
+Payslip Upload
+    │
+    ▼
+Document Processing
+    │
+    ▼
+Salary Extraction
+    │
+    ▼
+Verification
+    │
+    ▼
+Result
+    │
+    ├───────────────┐
+    ▼               ▼
+Dashboard      Salary Passport
+```
 
-⭐ PaySaathi
-Know Your Salary. Verify Your Salary.
-Your job changes. Your salary profile doesn't.
+---
 
-Built for LTHackfest 2026.
+# Security Considerations
+
+Salary and payslip information may contain sensitive financial and personal data.
+
+A production implementation should include:
+
+* Authentication
+* Authorization
+* Encryption at rest
+* Encryption in transit
+* Secure document storage
+* Access control
+* Data minimization
+* Consent management
+* User-controlled deletion
+* Secure API endpoints
+* Audit logging
+
+The current implementation is a prototype and should not be used to process sensitive production data without appropriate security controls.
+
+---
+
+# Responsible Use
+
+PaySaathi is designed to identify information that may require review.
+
+A detected discrepancy does not automatically establish that an employer has violated a law or regulation.
+
+Salary calculations depend on:
+
+* User-provided information
+* Configured rules
+* Available salary data
+* Document extraction accuracy
+
+The platform should therefore be treated as an assistance and information tool rather than a definitive legal authority.
+
+---
+
+# Current Status
+
+PaySaathi currently provides a functional prototype covering the core salary verification journey:
+
+* Worker selection
+* Worker-specific salary inputs
+* Expected salary calculation
+* Payslip upload
+* Salary analysis workflow
+* Expected vs actual salary comparison
+* Overtime information
+* Night-shift information
+* Salary Passport
+* Dashboard
+* Multilingual interface
+* Voice accessibility
+* Complaint draft generation
+* Responsive interface
+* Interactive UI and animations
+
+---
+
+# Future Improvements
+
+## Backend Integration
+
+Introduce a production backend for:
+
+* User authentication
+* Secure salary records
+* Document storage
+* Cross-device synchronization
+
+## OCR Improvements
+
+Improve extraction accuracy for:
+
+* Different payslip layouts
+* Low-quality images
+* Regional formats
+* Scanned documents
+
+## Verified Salary Rules
+
+Integrate authoritative wage and statutory datasets with versioned rule management.
+
+## Expanded Language Support
+
+Extend the platform to additional Indian regional languages.
+
+## Advanced Analytics
+
+Provide salary trends and historical analysis while maintaining user privacy.
+
+## Organization Dashboard
+
+Develop dedicated workflows for organizations supporting workers.
+
+---
+
+# Project Objectives
+
+PaySaathi focuses on four core objectives:
+
+### 1. Understand
+
+Make salary information easier to understand.
+
+### 2. Verify
+
+Help users compare expected and received salary information.
+
+### 3. Preserve
+
+Maintain salary records in one place.
+
+### 4. Carry Forward
+
+Allow users to build a continuous salary history across jobs.
+
+---
+
+# License
+
+This project is currently maintained as a prototype.
+
+Licensing terms can be defined as the project moves toward production.
+
+```
+```
