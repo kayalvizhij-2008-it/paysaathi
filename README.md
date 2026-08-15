@@ -1,8 +1,3 @@
-Yes — understood. You want a **pure professional GitHub project README**, with **no hackathon/team/pitch language**, written like a serious software project that adds value to your GitHub and resume.
-
-Copy-paste this directly:
-
-````markdown
 # PaySaathi
 
 ## Worker-First Salary Verification & Salary Intelligence Platform
