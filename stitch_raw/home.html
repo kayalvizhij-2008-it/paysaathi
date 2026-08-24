@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PaySaathi - The Empowered Artisan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            opacity: 0.02;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#004c69", "inverse-primary": "#835500", "on-surface": "#eee0d2", "primary-fixed": "#ffddb4", "on-error-container": "#ffdad6", "tertiary": "#9bd9ff", "on-secondary-container": "#b6b5b1", "surface-tint": "#ffb955", "error": "#ffb4ab", "on-background": "#eee0d2", "surface-bright": "#40382e", "tertiary-fixed-dim": "#7cd0ff", "on-secondary-fixed-variant": "#474744", "on-tertiary-container": "#004d6a", "surface-container-high": "#302920", "outline-variant": "#524534", "on-primary-fixed-variant": "#633f00", "tertiary-container": "#3ac2ff", "on-secondary": "#30312e", "surface-dim": "#19120a", "surface-container": "#251e16", "secondary": "#c8c6c3", "primary-container": "#f5a623", "surface-container-highest": "#3c332a", "on-primary-container": "#644000", "on-surface-variant": "#d7c3ae", "surface-variant": "#3c332a", "surface-container-low": "#211a12", "tertiary-fixed": "#c4e7ff", "on-secondary-fixed": "#1b1c1a", "error-container": "#93000a", "inverse-on-surface": "#372f26", "surface-container-lowest": "#130d06", "inverse-surface": "#eee0d2", "primary": "#ffc880", "secondary-fixed": "#e4e2de", "background": "#19120a", "secondary-fixed-dim": "#c8c6c3", "on-error": "#690005", "on-tertiary-fixed": "#001e2c", "on-primary": "#452b00", "outline": "#9f8e7a", "primary-fixed-dim": "#ffb955", "on-tertiary": "#00344a", "surface": "#19120a", "on-primary-fixed": "#291800", "secondary-container": "#474744"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-mobile": "20px", "unit": "8px", "gutter": "24px", "container-max": "1280px", "margin-desktop": "40px"
+                    },
+                    fontFamily: {
+                        "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "500" }],
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "display-lg-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "display-lg": ["64px", { lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }],
+                        "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased relative min-h-screen pb-24 md:pb-0 overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<div class="grain-overlay"></div>
+<!-- TopAppBar Shared Component -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 duration-200 p-2 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+            PaySaathi
+        </div>
+<button class="h-10 w-10 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center overflow-hidden hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a subtle, abstract geometric pattern resembling a stylized worker profile icon in deep charcoal and saffron, high contrast, elegant corporate identity, premium light mode studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXiMF2ffWttGhbSpilUhCmBdvbrsrJk5WX1_Bnzy6tWSU_9je5Y3Ng3OR75MUP_F1S6Xr4F_zh-45DRRhUEySLXFJZckyhpuQxGCCaiBxdQHxOUw0V7_awYMd_VipfO3J9Rnqfhsva_b-GGcQCzG0TlLvwXL_2vPPO7QJz16ZPsrRdGWQy7M-6c-izl-lg8BiHxAswtexAIGbjEAIdOyp9aeO_fxFo2PZqPBw_J2k0IjEoJWWGNnr62w"/>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 md:pt-32">
+<!-- Hero Section (Dark Theme) -->
+<section class="relative px-margin-mobile md:px-margin-desktop py-12 md:py-24 max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-12">
+<!-- Text Content -->
+<div class="flex-1 space-y-6 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-container/10 border border-primary-container/20 text-primary-fixed-dim font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+                    AI Wage Intelligence
+                </div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface leading-tight">
+                    Know What You Earn.<br/>
+<span class="text-primary-fixed-dim">Verify What You Deserve.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Empowering everyday artisans and workers with precise, AI-driven salary verification. Secure your financial dignity in minutes.
+                </p>
+<div class="pt-4 flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-6 py-3 rounded-lg hover:shadow-[inset_0_0_12px_rgba(255,255,255,0.2)] transition-all active:scale-95 flex items-center justify-center gap-2">
+                        Get Started
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="border border-outline text-on-surface font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-surface-container transition-all active:scale-95 flex items-center justify-center">
+                        View Demo
+                    </button>
+</div>
+</div>
+<!-- Signature Hero Visual: Salary Passport -->
+<div class="flex-1 w-full max-w-md relative z-10 flex justify-center">
+<!-- Ambient Saffron Glow -->
+<div class="absolute inset-0 bg-primary-container/20 blur-[80px] rounded-full scale-75 -z-10"></div>
+<!-- Glassmorphic Card -->
+<div class="w-full bg-surface-container/60 backdrop-blur-2xl border border-outline-variant/30 rounded-[24px] p-6 shadow-2xl relative overflow-hidden">
+<!-- Top section -->
+<div class="flex justify-between items-start mb-8">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed-dim">local_police</span>
+</div>
+<div>
+<h3 class="font-headline-md text-label-md text-on-surface">Security Worker</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">ID: PS-8492-X</p>
+</div>
+</div>
+<div class="bg-error-container/20 text-error px-3 py-1 rounded-full border border-error-container/30 font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                            Needs Review
+                        </div>
+</div>
+<!-- Data Points -->
+<div class="space-y-4 relative z-10">
+<div class="bg-surface-container-high rounded-xl p-4 border border-outline-variant/10">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Expected Salary (Area Standard)</p>
+<p class="font-headline-md text-headline-md text-primary-fixed-dim">₹18,500<span class="text-label-md text-on-surface-variant font-normal">/mo</span></p>
+</div>
+<div class="bg-surface-container-high rounded-xl p-4 border border-outline-variant/10 relative overflow-hidden">
+<!-- Subtle red gradient for discrepancy -->
+<div class="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-error-container/10 to-transparent"></div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Actual Payout</p>
+<p class="font-headline-md text-headline-md text-on-surface">₹16,200<span class="text-label-md text-on-surface-variant font-normal">/mo</span></p>
+</div>
+</div>
+<!-- Decorative elements -->
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Verified by PaySaathi AI</span>
+<div class="flex gap-1">
+<div class="w-1 h-1 rounded-full bg-primary-container"></div>
+<div class="w-1 h-1 rounded-full bg-primary-container"></div>
+<div class="w-1 h-1 rounded-full bg-primary-container/30"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Features Grid (Ivory Section Equivalent - using inverse-surface token for contrast as per instructions while adhering to theme) -->
+<section class="bg-inverse-surface text-inverse-on-surface py-20 px-margin-mobile md:px-margin-desktop rounded-t-[40px] mt-12">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4 text-inverse-on-surface">Precision Tools for Modern Workers</h2>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant max-w-2xl mx-auto">
+                        Everything you need to validate your earnings, structured in a clear, dignified experience.
+                    </p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-unit*3 lg:gap-6 auto-rows-[280px]">
+<!-- Feature 1: Salary Check (Spans 8 columns) -->
+<div class="md:col-span-8 bg-surface-bright border border-outline/20 rounded-[24px] p-8 flex flex-col justify-between relative overflow-hidden group hover:shadow-lg transition-all duration-300">
+<!-- Abstract pattern background -->
+<div class="absolute inset-0 opacity-10 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A subtle, elegant, low-contrast geometric line pattern in light beige and cream tones, creating a sophisticated textured background for a digital card, minimalist aesthetic, high-end editorial design style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPEkQUNz5DXvT1ubI3Ll5lp3If17mMxHWMznyxSmRq5X1ghGwL1fWep1WRpqj2oU31Hub_xwAga1fTsGFoF4XHOutFehrp04W9sl2afc7zKLzEk-adOPg1Oaqba55YHmOfVTHEq-aGFjQ6mDsZZpYjoEcdu3_MBjs6CXRTBfW-wsdzAeNwbXp3UfR7lUH7fvDBKKKgRqOjFqaB3zlQs7QYiwOuniLcfv-khqeFzrN0lSAUvtx07Pw4UQ')"></div>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-xl bg-inverse-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-inverse-primary">calculate</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-inverse-on-surface mb-2">Salary Check</h3>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant max-w-md">
+                                Instantly compare your current wages against regional benchmarks and industry standards for your specific role.
+                            </p>
+</div>
+<div class="relative z-10 mt-auto">
+<span class="text-inverse-primary font-label-md text-label-md flex items-center gap-1 group-hover:gap-2 transition-all">Explore Tool <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Feature 2: Payslip Verify (Spans 4 columns) -->
+<div class="md:col-span-4 bg-primary-container text-on-primary-container rounded-[24px] p-8 flex flex-col justify-between relative overflow-hidden group hover:shadow-lg transition-all duration-300">
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-xl bg-on-primary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-primary-container">document_scanner</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Payslip Verify</h3>
+<p class="font-body-md text-body-md opacity-90">
+                                Upload your slip. Our AI detects anomalies, hidden deductions, and compliance issues instantly.
+                            </p>
+</div>
+</div>
+<!-- Feature 3: Salary Passport (Spans 12 columns) -->
+<div class="md:col-span-12 bg-surface-bright border border-outline/20 rounded-[24px] p-8 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden group hover:shadow-lg transition-all duration-300">
+<div class="flex-1 relative z-10">
+<div class="w-12 h-12 rounded-xl bg-inverse-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-inverse-primary">badge</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-inverse-on-surface mb-2">The Salary Passport</h3>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant max-w-lg mb-6">
+                                Your definitive digital record. Consolidate your work history, verified earnings, and professional credibility into a single, secure profile you can share with employers.
+                            </p>
+<button class="border-2 border-inverse-primary text-inverse-primary font-label-md text-label-md px-6 py-2.5 rounded-lg hover:bg-inverse-primary hover:text-on-primary transition-colors">
+                                Create Your Passport
+                            </button>
+</div>
+<!-- Visual Element for Passport -->
+<div class="w-full md:w-1/3 h-48 bg-inverse-surface rounded-xl border border-outline-variant/30 flex items-center justify-center shadow-inner relative overflow-hidden">
+<img class="w-[80%] h-auto object-contain drop-shadow-xl transform group-hover:scale-105 transition-transform duration-500" data-alt="A stylized, modern digital ID card graphic floating in a 3D isometric view. The card features elegant typography and subtle saffron highlights against an ivory background, representing professional dignity and secure data verification in a high-tech setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdJli8_FwsN2uC4VBA6w9ZyVJwV40t7rv3Mjvaja_nOjdZV2dGXK1DR0OFn3eIIsagZXgUMCHuXUZCXT74oqLZ83x-osI1UePNLWpiwYGYtZmbkANr9RNA7LJ3klS8MdRpFMOUziRJw3NoTIqx0UjHZj-sw_DPil6vcgiKw99AXX7ONkbYZ8MVl3jol0iAxo5mRiijMoR08_u4zxWHID3BNYT89D85E7kf31RrNyjQuAXSnWt99iqhyg"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shared Component (Mobile Only) -->
+<nav class="fixed bottom-0 w-full rounded-t-xl z-50 bg-surface-container dark:bg-surface-container-highest border-t border-outline-variant/20 shadow-[0px_-4px_12px_rgba(0,0,0,0.1)] flex justify-around items-center h-16 px-2 pb-safe md:hidden">
+<!-- Active: Home -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim bg-primary-container/20 rounded-xl px-3 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-[10px] mt-1">Home</span>
+</a>
+<!-- Inactive -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-container hover:bg-on-surface-variant/10 rounded-xl px-3 py-1 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-sm text-[10px] mt-1">Check</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-container hover:bg-on-surface-variant/10 rounded-xl px-3 py-1 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-label-sm text-[10px] mt-1">Verify</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-container hover:bg-on-surface-variant/10 rounded-xl px-3 py-1 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">badge</span>
+<span class="font-label-sm text-[10px] mt-1">Passport</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-container hover:bg-on-surface-variant/10 rounded-xl px-3 py-1 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-[10px] mt-1">Dash</span>
+</a>
+</nav>
+<!-- Footer Shared Component -->
+<footer class="w-full py-8 border-t border-outline-variant/10 bg-surface-container-lowest dark:bg-surface-container-lowest flex flex-col items-center gap-4 text-center px-margin-mobile mb-20 md:mb-0">
+<div class="font-label-md text-label-md font-bold text-on-surface">PaySaathi</div>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Support</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Privacy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Terms</a>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-4">
+            © 2024 PaySaathi. The Empowered Artisan.
+        </div>
+</footer>
+</body></html>

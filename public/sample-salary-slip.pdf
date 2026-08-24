@@ -1,0 +1,75 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Resources <<
+/Font <<
+/F1 4 0 R
+>>
+>>
+/Contents 5 0 R
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+>>
+endobj
+5 0 obj
+<<
+/Length 380
+>>
+stream
+BT
+/F1 18 Tf
+50 720 Td
+(PAYSAATHI SAMPLE SALARY AUDIT SLIP) Tj
+/F1 12 Tf
+0 -30 Td
+(Employee: Vikram Singh | Worker ID: PS-8492-X) Tj
+0 -20 Td
+(Employer: Acme Security & Facilities Ltd.) Tj
+0 -20 Td
+(Period: October 2024 | Site: Sterling Heights Tower B) Tj
+0 -30 Td
+(Gross Entitlement: INR 18,500 | Net Disbursed: INR 16,200) Tj
+0 -20 Td
+(Logged Overtime: 24 Hours | Statutory Multiplier: 2.0x) Tj
+0 -20 Td
+(Audit Finding: Potential Shortfall of INR 2,300 Flagged) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000228 00000 n 
+0000000305 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+738
+%%EOF

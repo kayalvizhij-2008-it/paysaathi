@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PaySaathi - Salary Check</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004c69",
+                        "inverse-primary": "#835500",
+                        "on-surface": "#eee0d2",
+                        "primary-fixed": "#ffddb4",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#9bd9ff",
+                        "on-secondary-container": "#b6b5b1",
+                        "surface-tint": "#ffb955",
+                        "error": "#ffb4ab",
+                        "on-background": "#eee0d2",
+                        "surface-bright": "#40382e",
+                        "tertiary-fixed-dim": "#7cd0ff",
+                        "on-secondary-fixed-variant": "#474744",
+                        "on-tertiary-container": "#004d6a",
+                        "surface-container-high": "#302920",
+                        "outline-variant": "#524534",
+                        "on-primary-fixed-variant": "#633f00",
+                        "tertiary-container": "#3ac2ff",
+                        "on-secondary": "#30312e",
+                        "surface-dim": "#19120a",
+                        "surface-container": "#251e16",
+                        "secondary": "#c8c6c3",
+                        "primary-container": "#f5a623",
+                        "surface-container-highest": "#3c332a",
+                        "on-primary-container": "#644000",
+                        "on-surface-variant": "#d7c3ae",
+                        "surface-variant": "#3c332a",
+                        "surface-container-low": "#211a12",
+                        "tertiary-fixed": "#c4e7ff",
+                        "on-secondary-fixed": "#1b1c1a",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#372f26",
+                        "surface-container-lowest": "#130d06",
+                        "inverse-surface": "#eee0d2",
+                        "primary": "#ffc880",
+                        "secondary-fixed": "#e4e2de",
+                        "background": "#19120a",
+                        "secondary-fixed-dim": "#c8c6c3",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#001e2c",
+                        "on-primary": "#452b00",
+                        "outline": "#9f8e7a",
+                        "primary-fixed-dim": "#ffb955",
+                        "on-tertiary": "#00344a",
+                        "surface": "#19120a",
+                        "on-primary-fixed": "#291800",
+                        "secondary-container": "#474744"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #121212;
+            color: #eee0d2;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+        }
+        .glass-card {
+            background-color: rgba(253, 251, 247, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .ivory-form {
+            background-color: #FDFBF7;
+            color: #1A1A1A;
+        }
+        
+        /* Range Slider Styling */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #F5A623;
+            cursor: pointer;
+            margin-top: -10px;
+            box-shadow: 0 0 10px rgba(245, 166, 35, 0.5);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #2A2A2A;
+            border-radius: 2px;
+        }
+        .ivory-form input[type=range]::-webkit-slider-runnable-track {
+             background: #E0E0E0;
+        }
+        
+        /* Toggle Switch Styling */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #F5A623;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #F5A623;
+        }
+        
+        .result-view {
+            display: none;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .progress-bar-fill {
+            width: 0;
+            transition: width 1s ease-in-out;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md antialiased pb-24 pt-20">
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-surface/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-sm border-b border-outline-variant/10">
+<div class="flex justify-between items-center px-margin-mobile py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">PaySaathi</h1>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-outline-variant/20 hover:opacity-80 transition-opacity active:scale-95 duration-200 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="A portrait of a skilled Indian artisan worker looking confident and proud. The background is a clean, minimal workspace with soft, high-key lighting emphasizing a dignified, professional atmosphere. The color palette features deep charcoal, pristine ivory, and subtle saffron accents, aligning with the empowered artisan brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFopCUdrVv7sdJMY3vkmlYCMp-m4WmtXXlkQFir0Dqgy3XKc7_7Xre6G5ckS0LLMfXKjEQ5rlUdvn3vHOknxkh-rpYzSGXMRLkgNjeuTIcuktlo8xHRUSyDIOF5-2fPw1c08QbL0U5zNQdrZ4h9q3vHD0KlAEHyB2BZPjpsFeqpppSyiK2JCx5Z7E_9u3O1LmrWArHcF4Yw3VPPq7YMHwTN6VKhJp2Z29wB212ue5sQkIW5i0NC15aVg"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-12">
+<!-- Header Section -->
+<div class="mb-10 text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Salary Check</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Calculate your expected earnings based on current industry standards.</p>
+</div>
+<!-- Form Section -->
+<div class="ivory-form rounded-2xl p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200 relative overflow-hidden transition-all duration-500" id="salary-form">
+<form onsubmit="event.preventDefault(); showResult();">
+<div class="space-y-8">
+<!-- Worker Type -->
+<div>
+<label class="block font-label-md text-label-md text-gray-700 mb-2">Worker Type</label>
+<div class="relative">
+<select class="w-full bg-white border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-container focus:border-primary-container block p-3.5 appearance-none font-body-md shadow-sm transition-all duration-200 focus:shadow-[0_0_0_3px_rgba(245,166,35,0.2)]">
+<option>Construction - Mason</option>
+<option>Construction - Helper</option>
+<option>Manufacturing - Assembler</option>
+<option>Logistics - Driver</option>
+<option>Textile - Weaver</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Location -->
+<div>
+<label class="block font-label-md text-label-md text-gray-700 mb-2">Work Location (City/State)</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-gray-400">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<input class="w-full bg-white border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-container focus:border-primary-container block pl-10 p-3.5 font-body-md shadow-sm transition-all duration-200 focus:shadow-[0_0_0_3px_rgba(245,166,35,0.2)]" placeholder="e.g. Mumbai, Maharashtra" type="text" value="Bengaluru, Karnataka"/>
+</div>
+</div>
+<!-- Working Days Slider -->
+<div>
+<div class="flex justify-between mb-2">
+<label class="block font-label-md text-label-md text-gray-700">Days Worked (This Month)</label>
+<span class="font-headline-md text-headline-md text-primary-container" id="days-value">24</span>
+</div>
+<input class="w-full h-2 rounded-lg cursor-pointer" max="31" min="1" oninput="document.getElementById('days-value').textContent = this.value" type="range" value="24"/>
+<div class="flex justify-between text-xs text-gray-500 mt-2 font-label-sm">
+<span>1 Day</span>
+<span>31 Days</span>
+</div>
+</div>
+<!-- Toggles Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-gray-200">
+<!-- Overtime Toggle -->
+<div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-gray-100">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-gray-900">Overtime</h4>
+<p class="text-xs text-gray-500">Extra hours worked</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-gray-300 appearance-none cursor-pointer transition-transform duration-200 ease-in-out z-10 top-0 left-0" id="toggle-ot" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer transition-colors duration-200 ease-in-out" for="toggle-ot"></label>
+</div>
+</div>
+<!-- Night Shift Toggle -->
+<div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-gray-100">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-gray-900">Night Shifts</h4>
+<p class="text-xs text-gray-500">Worked after 10 PM</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-gray-300 appearance-none cursor-pointer transition-transform duration-200 ease-in-out z-10 top-0 left-0" id="toggle-ns" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer transition-colors duration-200 ease-in-out" for="toggle-ns"></label>
+</div>
+</div>
+</div>
+<!-- Submit Action -->
+<div class="pt-6">
+<button class="w-full bg-[#121212] text-[#FDFBF7] font-headline-md text-label-md py-4 rounded-xl hover:bg-[#2A2A2A] transition-colors shadow-lg active:scale-[0.98] duration-200 flex justify-center items-center gap-2" type="submit">
+                            Calculate Expected Pay
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+<!-- Result View (Initially Hidden) -->
+<div class="result-view glass-card rounded-2xl p-6 md:p-10 relative overflow-hidden mt-8 hidden" id="salary-result">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase mb-2">Expected Pay</h3>
+<div class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary flex items-baseline gap-1">
+<span>₹19,450</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Estimated for 24 days as Mason in Bengaluru</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-variant border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary/50 transition-colors" onclick="resetForm()">
+<span class="material-symbols-outlined">refresh</span>
+</button>
+</div>
+<!-- Breakdown -->
+<div class="space-y-6 mb-10">
+<!-- Base Pay -->
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span> Base Pay
+                        </span>
+<span class="font-label-md text-label-md text-on-surface">₹16,800</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary-container progress-bar-fill rounded-full" data-target="86%" id="bar-base" style="width: 0%;"></div>
+</div>
+</div>
+<!-- Overtime -->
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Overtime (12 hrs)
+                        </span>
+<span class="font-label-md text-label-md text-on-surface">₹2,650</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-tertiary progress-bar-fill rounded-full" data-target="14%" id="bar-ot" style="width: 0%;"></div>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<button class="w-full bg-gradient-to-r from-[#F5A623] to-[#FF8C00] text-[#121212] font-headline-md text-label-md py-4 rounded-xl hover:shadow-[0_0_20px_rgba(245,166,35,0.4)] transition-all active:scale-[0.98] duration-200 flex justify-center items-center gap-2 font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">badge</span>
+                Save to Salary Passport
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface-container dark:bg-surface-container-highest fixed bottom-0 w-full rounded-t-xl z-50 shadow-[0px_-4px_12px_rgba(0,0,0,0.1)] md:hidden">
+<div class="flex justify-around items-center h-16 px-2 pb-safe">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-container hover:bg-on-surface-variant/10 active:scale-90 transition-transform p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim bg-primary-container/20 rounded-xl px-3 py-1 hover:bg-on-surface-variant/10 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-label-sm text-label-sm mt-1">Check</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-container hover:bg-on-surface-variant/10 active:scale-90 transition-transform p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-label-sm text-label-sm mt-1">Verify</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-container hover:bg-on-surface-variant/10 active:scale-90 transition-transform p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">badge</span>
+<span class="font-label-sm text-label-sm mt-1">Passport</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-container hover:bg-on-surface-variant/10 active:scale-90 transition-transform p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm mt-1">Dash</span>
+</a>
+</div>
+</nav>
+<script>
+        function showResult() {
+            const form = document.getElementById('salary-form');
+            const result = document.getElementById('salary-result');
+            
+            form.style.opacity = '0';
+            form.style.transform = 'translateY(-20px)';
+            
+            setTimeout(() => {
+                form.style.display = 'none';
+                result.style.display = 'block';
+                
+                // Animate progress bars
+                setTimeout(() => {
+                    const baseBar = document.getElementById('bar-base');
+                    const otBar = document.getElementById('bar-ot');
+                    baseBar.style.width = baseBar.getAttribute('data-target');
+                    otBar.style.width = otBar.getAttribute('data-target');
+                }, 100);
+                
+            }, 300);
+        }
+
+        function resetForm() {
+            const form = document.getElementById('salary-form');
+            const result = document.getElementById('salary-result');
+            
+            result.style.display = 'none';
+            form.style.display = 'block';
+            
+            // Reset progress bars
+            document.getElementById('bar-base').style.width = '0%';
+            document.getElementById('bar-ot').style.width = '0%';
+            
+            setTimeout(() => {
+                form.style.opacity = '1';
+                form.style.transform = 'translateY(0)';
+            }, 50);
+        }
+    </script>
+</body></html>
