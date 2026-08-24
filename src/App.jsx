@@ -18,15 +18,17 @@ import PayslipVerifyPage from './components/payslip-verify/PayslipVerifyPage';
 import SalaryPassportPage from './components/salary-passport/SalaryPassportPage';
 import WorkerDashboardPage from './components/dashboard/WorkerDashboardPage';
 import WorkerActionPage from './components/worker-action/WorkerActionPage';
+import VoiceAssistantPage from './components/voice/VoiceAssistantPage';
 
 // Page title map
 const PAGE_TITLES = {
-  home: 'PaySaathi — India\'s Worker Wage Intelligence Platform',
+  home: 'PaySaathi — Worker Salary Intelligence & Verification Platform',
   'salary-check': 'Wage Benchmark Calculator — PaySaathi',
-  'payslip-verify': 'Payslip Verification — PaySaathi',
-  'salary-passport': 'Salary Passport — PaySaathi',
-  dashboard: 'Worker Dashboard — PaySaathi',
-  'worker-action': 'Dispute Resolution Drafts — PaySaathi',
+  'payslip-verify': 'Payslip OCR Verification & Audit — PaySaathi',
+  'salary-passport': 'Digital Salary Passport — PaySaathi',
+  dashboard: 'Salary Analytics Dashboard — PaySaathi',
+  'voice-assistant': 'Voice AI Assistant — PaySaathi',
+  'worker-action': 'Worker Dispute Resolution Drafts — PaySaathi',
 };
 
 function AppContent() {
@@ -38,8 +40,11 @@ function AppContent() {
   }, [activePage]);
 
   return (
-    <div className="min-h-screen bg-[#0A0A0B] text-[#F5F5F7] flex flex-col relative selection:bg-[#E11D3C]/40 selection:text-white">
+    <div className="min-h-screen bg-[#070B14] text-[#F8FAFC] flex flex-col relative selection:bg-[#00F0FF]/30 selection:text-white">
       
+      {/* Background Cyber Grid */}
+      <div className="cyber-grid fixed inset-0 opacity-40 pointer-events-none -z-10" aria-hidden="true"></div>
+
       {/* Subtle Grain Overlay */}
       <div className="grain-overlay" aria-hidden="true"></div>
 
@@ -52,8 +57,8 @@ function AppContent() {
         >
           <div className={`px-4 py-3 rounded-2xl shadow-2xl border text-xs font-bold flex items-center gap-2.5 ${
             toastMessage.type === 'warning'
-              ? 'bg-[#1A1209] text-amber-400 border-amber-500/40'
-              : 'bg-[#0A150E] text-emerald-400 border-emerald-500/40'
+              ? 'bg-[#1A1010] text-[#F43F5E] border-[#F43F5E]/40'
+              : 'bg-[#0A1A17] text-emerald-400 border-emerald-500/40'
           }`}>
             <span className="material-symbols-outlined text-base material-symbols-fill">
               {toastMessage.type === 'warning' ? 'warning' : 'check_circle'}
@@ -83,6 +88,7 @@ function AppContent() {
         {activePage === 'payslip-verify' && <PayslipVerifyPage />}
         {activePage === 'salary-passport' && <SalaryPassportPage />}
         {activePage === 'dashboard' && <WorkerDashboardPage />}
+        {activePage === 'voice-assistant' && <VoiceAssistantPage />}
         {activePage === 'worker-action' && <WorkerActionPage />}
       </main>
 

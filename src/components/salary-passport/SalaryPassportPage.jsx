@@ -11,7 +11,11 @@ export default function SalaryPassportPage() {
   const { t } = useApp();
 
   return (
-    <div className="pt-32 pb-32 min-h-screen bg-[#0A0A0B]">
+    <div className="pt-32 pb-32 min-h-screen bg-[#070B14] relative overflow-hidden">
+      
+      {/* Background ambient radial glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#00F0FF]/15 via-[#10B981]/10 to-transparent rounded-full blur-[140px] pointer-events-none -z-10 animate-radial-breathe"></div>
+
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <SectionHeader

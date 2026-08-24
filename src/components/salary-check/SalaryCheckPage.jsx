@@ -16,9 +16,9 @@ export default function SalaryCheckPage() {
   const [showResult, setShowResult] = useState(false);
 
   const steps = [
-    { id: 1, label: t.step1, short: 'Work' },
-    { id: 2, label: t.step2, short: 'Hours' },
-    { id: 3, label: t.step3, short: 'Overtime' }
+    { id: 1, label: t.step1, short: 'Trade & City' },
+    { id: 2, label: t.step2, short: 'Shift Hours' },
+    { id: 3, label: t.step3, short: '2.0x Overtime' }
   ];
 
   const handleNext = () => {
@@ -42,12 +42,17 @@ export default function SalaryCheckPage() {
   };
 
   return (
-    <div className="pt-32 pb-32 min-h-screen bg-[#0A0A0B]">
+    <div className="pt-32 pb-32 min-h-screen bg-[#070B14] relative overflow-hidden">
+      
+      {/* Ambient background glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#00F0FF]/15 via-[#10B981]/10 to-transparent rounded-full blur-[140px] pointer-events-none -z-10 animate-radial-breathe"></div>
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
         {/* Page Header */}
         <SectionHeader
           eyebrow="Wage Intelligence Engine"
+          eyebrowIcon="calculate"
           title="Calculate Your"
           highlightText="Expected Pay"
           description="Audit your true market entitlement against current state minimum wage schedules and mandatory 2.0x overtime statutory standards."
@@ -57,7 +62,7 @@ export default function SalaryCheckPage() {
         {showResult ? (
           <SalaryResultCard result={salaryResult} onReset={handleReset} />
         ) : (
-          <div className="glass-card rounded-[32px] p-6 sm:p-10 border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.9)] relative overflow-hidden">
+          <div className="glass-card rounded-[36px] p-6 sm:p-10 border border-[#00F0FF]/30 shadow-[0_25px_60px_rgba(0,0,0,0.95)] relative overflow-hidden">
             
             {/* Stepper Progress Indicator */}
             <div className="mb-10 pb-8 border-b border-white/[0.08]">

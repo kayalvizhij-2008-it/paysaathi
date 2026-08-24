@@ -10,13 +10,13 @@ export function LinearProgress({ value = 0, max = 100, showLabel = false, classN
     <div className={`w-full space-y-1.5 ${className}`}>
       {showLabel && (
         <div className="flex justify-between items-center text-xs font-semibold">
-          <span className="text-[#9A9AA3]">Progress</span>
-          <span className="text-[#E11D3C] font-mono">{percent}%</span>
+          <span className="text-[#94A3B8]">Progress</span>
+          <span className="text-[#00F0FF] font-mono">{percent}%</span>
         </div>
       )}
-      <div className="w-full h-2 bg-[#1C1C1F] rounded-full overflow-hidden border border-white/[0.06] p-0.5">
+      <div className="w-full h-2 bg-[#0F172A] rounded-full overflow-hidden border border-white/[0.08] p-0.5">
         <div
-          className="h-full bg-gradient-to-r from-[#C81E3A] via-[#E11D3C] to-[#E11D3C] rounded-full transition-all duration-300 shadow-[0_0_12px_rgba(225,29,60,0.6)]"
+          className="h-full bg-gradient-to-r from-[#00F0FF] via-[#06B6D4] to-[#10B981] rounded-full transition-all duration-300 shadow-[0_0_12px_rgba(0,240,255,0.6)]"
           style={{ width: `${percent}%` }}
         ></div>
       </div>
@@ -56,7 +56,7 @@ export function CircularProgress({
           cx={size / 2}
           cy={size / 2}
           r={radius}
-          stroke="url(#crimsonGradient)"
+          stroke="url(#cyanGradient)"
           strokeWidth={strokeWidth}
           strokeDasharray={circumference}
           strokeDashoffset={strokeDashoffset}
@@ -65,15 +65,15 @@ export function CircularProgress({
           className="transition-all duration-500 ease-out"
         />
         <defs>
-          <linearGradient id="crimsonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#C81E3A" />
-            <stop offset="100%" stopColor="#E11D3C" />
+          <linearGradient id="cyanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#00F0FF" />
+            <stop offset="100%" stopColor="#10B981" />
           </linearGradient>
         </defs>
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-        {label && <span className="text-sm font-extrabold text-[#F5F5F7] font-mono">{label}</span>}
-        {sublabel && <span className="text-[9px] text-[#9A9AA3] uppercase tracking-wider">{sublabel}</span>}
+        {label && <span className="text-sm font-extrabold text-[#F8FAFC] font-mono">{label}</span>}
+        {sublabel && <span className="text-[9px] text-[#94A3B8] uppercase tracking-wider">{sublabel}</span>}
       </div>
     </div>
   );
@@ -87,7 +87,7 @@ export function StepperProgress({ steps, currentStep, onStepClick }) {
     <div className="w-full">
       <div className="flex items-center justify-between relative">
         {/* Connecting Background Line */}
-        <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-[#1C1C1F] -translate-y-1/2 -z-0"></div>
+        <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-[#0F172A] -translate-y-1/2 -z-0"></div>
 
         {steps.map((step, idx) => {
           const stepNum = idx + 1;
@@ -103,12 +103,12 @@ export function StepperProgress({ steps, currentStep, onStepClick }) {
                 type="button"
                 onClick={() => onStepClick && onStepClick(stepNum)}
                 disabled={!onStepClick}
-                className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-black transition-all duration-300 ${
+                className={`w-9.5 h-9.5 rounded-full flex items-center justify-center text-xs font-black transition-all duration-300 ${
                   isCompleted
-                    ? 'bg-emerald-500 text-[#0A0A0B] shadow-[0_0_12px_rgba(16,185,129,0.4)]'
+                    ? 'bg-emerald-400 text-[#070B14] shadow-[0_0_15px_rgba(16,185,129,0.5)]'
                     : isCurrent
-                    ? 'bg-[#E11D3C] text-white shadow-[0_0_18px_rgba(225,29,60,0.6)] scale-110 border-2 border-[#F5F5F7]'
-                    : 'bg-[#1C1C1F] text-[#9A9AA3] border border-white/[0.1]'
+                    ? 'bg-[#00F0FF] text-[#070B14] shadow-[0_0_20px_rgba(0,240,255,0.7)] scale-110 border-2 border-white'
+                    : 'bg-[#0F172A] text-[#94A3B8] border border-white/[0.1]'
                 } ${onStepClick ? 'cursor-pointer hover:scale-105' : 'cursor-default'}`}
               >
                 {isCompleted ? (
@@ -120,7 +120,7 @@ export function StepperProgress({ steps, currentStep, onStepClick }) {
 
               <span
                 className={`text-[11px] font-semibold mt-2 tracking-tight whitespace-nowrap ${
-                  isCurrent ? 'text-[#E11D3C]' : isCompleted ? 'text-[#F5F5F7]' : 'text-[#9A9AA3]'
+                  isCurrent ? 'text-[#00F0FF] font-bold' : isCompleted ? 'text-[#F8FAFC]' : 'text-[#94A3B8]'
                 }`}
               >
                 {step.label}

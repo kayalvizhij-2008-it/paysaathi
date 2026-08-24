@@ -17,29 +17,29 @@ export default function AudioPlayer({ text, label = 'Listen Explanation' }) {
   return (
     <button
       onClick={handleToggle}
-      className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
+      className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer select-none ${
         isCurrentActive
-          ? 'bg-[#F5A623] text-[#121212] shadow-[0_0_15px_rgba(245,166,35,0.6)] animate-pulse'
-          : 'bg-[#251E16] text-[#FFB955] border border-[#F5A623]/30 hover:bg-[#F5A623]/15'
+          ? 'bg-[#00F0FF] text-[#070B14] shadow-[0_0_20px_rgba(0,240,255,0.7)] animate-pulse'
+          : 'bg-[#0F172A] text-[#00F0FF] border border-[#00F0FF]/30 hover:bg-[#00F0FF]/15 hover:border-[#00F0FF]/60'
       }`}
       aria-label={isCurrentActive ? 'Stop Voice Explanation' : 'Play Voice Explanation'}
     >
       {isCurrentActive ? (
         <>
           <span className="material-symbols-outlined text-sm material-symbols-fill">volume_up</span>
-          <span>Listening...</span>
-          <div className="flex items-center gap-0.5 h-3 ml-1">
-            <span className="w-0.5 bg-[#121212] wave-bar"></span>
-            <span className="w-0.5 bg-[#121212] wave-bar"></span>
-            <span className="w-0.5 bg-[#121212] wave-bar"></span>
-            <span className="w-0.5 bg-[#121212] wave-bar"></span>
+          <span>Playing Voice...</span>
+          <div className="flex items-center gap-0.5 h-3.5 ml-1">
+            <span className="w-0.5 bg-[#070B14] wave-bar"></span>
+            <span className="w-0.5 bg-[#070B14] wave-bar"></span>
+            <span className="w-0.5 bg-[#070B14] wave-bar"></span>
+            <span className="w-0.5 bg-[#070B14] wave-bar"></span>
           </div>
         </>
       ) : (
         <>
-          <span className="material-symbols-outlined text-sm material-symbols-fill">campaign</span>
+          <span className="material-symbols-outlined text-sm material-symbols-fill">graphic_eq</span>
           <span>{label}</span>
-          <span className="text-[10px] opacity-75">AI Voice</span>
+          <span className="text-[10px] opacity-75 font-mono">AI Audio</span>
         </>
       )}
     </button>

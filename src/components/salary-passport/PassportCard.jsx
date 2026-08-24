@@ -7,18 +7,18 @@ export default function PassportCard() {
   const { workerProfile, setIsShareModalOpen, setIsAddJobOpen, t } = useApp();
 
   return (
-    <div className="glass-card rounded-[32px] p-6 sm:p-8 border border-[#E11D3C]/25 shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_30px_rgba(200,30,58,0.1)] relative overflow-hidden">
+    <div className="glass-card rounded-[36px] p-6 sm:p-8 border border-[#00F0FF]/30 shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_35px_rgba(0,240,255,0.15)] relative overflow-hidden">
       
       {/* Background Ambient */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-[#E11D3C]/15 via-[#C81E3A]/05 to-transparent rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-[#0A0A0B]/80 to-transparent rounded-full blur-2xl pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-[#00F0FF]/15 via-[#10B981]/05 to-transparent rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-[#070B14]/80 to-transparent rounded-full blur-2xl pointer-events-none"></div>
 
       <div className="relative z-10 space-y-6">
         
         {/* Card Header */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b border-white/[0.07]">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b border-white/[0.08]">
           <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-[#E11D3C]/50 p-0.5 shadow-lg bg-[#121214]">
+            <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-[#00F0FF]/50 p-0.5 shadow-lg bg-[#0F172A]">
               <img
                 src={workerProfile.avatarUrl}
                 alt={workerProfile.name}
@@ -27,13 +27,13 @@ export default function PassportCard() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="text-xl font-black text-[#F5F5F7]">{workerProfile.name}</h3>
+                <h3 className="text-xl font-black text-[#F8FAFC]">{workerProfile.name}</h3>
                 <span className="material-symbols-outlined text-emerald-400 text-lg material-symbols-fill" title="Identity & KYC Verified">
                   verified
                 </span>
               </div>
-              <p className="text-xs font-semibold text-[#E11D3C]">{workerProfile.role}</p>
-              <p className="text-[11px] text-[#9A9AA3] font-mono">ID: {workerProfile.workerId} • {workerProfile.location}</p>
+              <p className="text-xs font-bold text-[#00F0FF]">{workerProfile.role}</p>
+              <p className="text-[11px] text-[#94A3B8] font-mono">ID: {workerProfile.workerId} • {workerProfile.location}</p>
             </div>
           </div>
 
@@ -62,39 +62,39 @@ export default function PassportCard() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           
           {/* Trust Score */}
-          <div className="bg-[#121214] rounded-2xl p-5 border border-emerald-500/20 flex flex-col justify-between hover:border-emerald-500/40 transition-colors">
+          <div className="bg-[#0A0F1D] rounded-2xl p-5 border border-emerald-500/30 flex flex-col justify-between hover:border-emerald-500/50 transition-colors shadow-lg">
             <div className="flex justify-between items-center mb-1">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#9A9AA3]">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#94A3B8] font-mono">
                 Verification Score
               </span>
               <span className="material-symbols-outlined text-emerald-400 text-base material-symbols-fill">verified</span>
             </div>
             <div className="flex items-baseline gap-1 my-2">
               <span className="text-3xl font-black text-emerald-400 font-mono">{workerProfile.trustScore}</span>
-              <span className="text-xs text-[#9A9AA3]">/ 100</span>
+              <span className="text-xs text-[#94A3B8]">/ 100</span>
             </div>
             <span className="text-[11px] text-emerald-400 font-semibold">{workerProfile.trustRating}</span>
           </div>
 
           {/* Tenure */}
-          <div className="bg-[#121214] rounded-2xl p-5 border border-white/[0.07] flex flex-col justify-between hover:border-white/[0.12] transition-colors">
+          <div className="bg-[#0A0F1D] rounded-2xl p-5 border border-white/[0.08] flex flex-col justify-between hover:border-[#00F0FF]/30 transition-colors shadow-lg">
             <div className="flex justify-between items-center mb-1">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#9A9AA3]">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#94A3B8] font-mono">
                 Verified Career Tenure
               </span>
-              <span className="material-symbols-outlined text-[#9A9AA3] text-base">history</span>
+              <span className="material-symbols-outlined text-[#00F0FF] text-base">history</span>
             </div>
             <div className="flex items-baseline gap-1 my-2">
-              <span className="text-3xl font-black text-[#F5F5F7] font-mono">{workerProfile.totalTenureMonths}</span>
-              <span className="text-xs text-[#9A9AA3]">Months</span>
+              <span className="text-3xl font-black text-[#F8FAFC] font-mono">{workerProfile.totalTenureMonths}</span>
+              <span className="text-xs text-[#94A3B8]">Months</span>
             </div>
-            <span className="text-[11px] text-[#9A9AA3] font-semibold">{workerProfile.verificationCount} Audited Slips</span>
+            <span className="text-[11px] text-[#94A3B8] font-semibold">{workerProfile.verificationCount} Audited Slips</span>
           </div>
 
           {/* Career Growth */}
-          <div className="bg-[#121214] rounded-2xl p-5 border border-white/[0.07] flex flex-col justify-between hover:border-white/[0.12] transition-colors">
+          <div className="bg-[#0A0F1D] rounded-2xl p-5 border border-white/[0.08] flex flex-col justify-between hover:border-[#00F0FF]/30 transition-colors shadow-lg">
             <div className="flex justify-between items-center mb-1">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#9A9AA3]">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#94A3B8] font-mono">
                 Cumulative Wage Growth
               </span>
               <span className="material-symbols-outlined text-emerald-400 text-base">trending_up</span>
@@ -102,19 +102,19 @@ export default function PassportCard() {
             <div className="flex items-baseline gap-1 my-2">
               <span className="text-3xl font-black text-emerald-400 font-mono">+{workerProfile.careerGrowthPercentage}%</span>
             </div>
-            <span className="text-[11px] text-[#9A9AA3]">₹15,000 → ₹22,000/mo</span>
+            <span className="text-[11px] text-[#94A3B8] font-mono">₹15,000 → ₹22,000/mo</span>
           </div>
 
         </div>
 
         {/* Active Employment Status Bar */}
-        <div className="p-4 rounded-2xl bg-[#1A0A0D] border border-[#E11D3C]/25 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs">
+        <div className="p-4 rounded-2xl bg-[#0F172A] border border-[#00F0FF]/30 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs">
           <div className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-[#E11D3C] text-base">apartment</span>
-            <span className="text-[#9A9AA3]">Active Deployment:</span>
-            <span className="font-bold text-[#F5F5F7]">{workerProfile.currentEmployer}</span>
+            <span className="material-symbols-outlined text-[#00F0FF] text-base">apartment</span>
+            <span className="text-[#94A3B8]">Active Deployment:</span>
+            <span className="font-bold text-[#F8FAFC]">{workerProfile.currentEmployer}</span>
           </div>
-          <span className="text-[11px] text-emerald-400 font-semibold bg-emerald-400/10 px-3 py-1 rounded-full border border-emerald-400/20">
+          <span className="text-[11px] text-emerald-400 font-bold bg-emerald-400/10 px-3 py-1 rounded-full border border-emerald-400/30">
             ● Active Contract Verified
           </span>
         </div>

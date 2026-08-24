@@ -12,7 +12,7 @@ export default function WorkerActionPage() {
   const templates = {
     en: {
       polite: `Respected Sir/Madam,\n\nI am writing to politely request a quick clarification regarding my October 2024 salary slip for site deployment at Sterling Heights (Worker ID: ${workerProfile.workerId}).\n\nAccording to my daily biometric log, I completed 22 standard working days and 24 overtime hours. My payslip reflects ₹1,200 for overtime instead of the statutory double-rate calculation (₹2,880), along with an unexplained deduction of ₹620 marked as 'Misc Adj.'\n\nCould you kindly review the attendance records and adjust this in the upcoming settlement? Thank you very much for your continuous support.\n\nWarm regards,\n${workerProfile.name}\n${workerProfile.role}\nPhone / ID: ${workerProfile.workerId}`,
-      formal: `To: Payroll & Accounts Desk\nEmployer: Acme Security & Facilities Ltd.\nDate: ${new Date().toLocaleDateString('en-IN')}\n\nSubject: Formal Notice of Wage Calculation Discrepancy — October 2024 (ID: ${workerProfile.workerId})\n\nDear Accounts Team,\n\nUpon auditing the October 2024 payslip against verified site logs, a variance of ₹2,300 has been identified:\n\n1. Overtime Compensation: 24 logged OT hours were credited at a flat rate of ₹1,200, whereas statutory provisions mandate compensation of ₹2,880.\n2. Deductions: An unitemized deduction of ₹620 ('Misc Adj.') without contract schedule reference.\n\nPlease find the attached PaySaathi digital audit slip and issue the requisite wage adjustment of ₹2,300 at the earliest.\n\nSincerely,\n${workerProfile.name}\nDesignation: ${workerProfile.role}`,
+      formal: `To: Payroll & Accounts Desk\nEmployer: Apex Facility Services Pvt. Ltd.\nDate: ${new Date().toLocaleDateString('en-IN')}\n\nSubject: Formal Notice of Wage Calculation Discrepancy — October 2024 (ID: ${workerProfile.workerId})\n\nDear Accounts Team,\n\nUpon auditing the October 2024 payslip against verified site logs, a variance of ₹2,300 has been identified:\n\n1. Overtime Compensation: 24 logged OT hours were credited at a flat rate of ₹1,200, whereas statutory provisions mandate compensation of ₹2,880.\n2. Deductions: An unitemized deduction of ₹620 ('Misc Adj.') without contract schedule reference.\n\nPlease find the attached PaySaathi digital audit slip and issue the requisite wage adjustment of ₹2,300 at the earliest.\n\nSincerely,\n${workerProfile.name}\nDesignation: ${workerProfile.role}`,
       statutory: `LEGAL / COMPLIANCE INQUIRY MEMO\nUnder Reference: Minimum Wages Act, 1948 & Factories Act, 1948 (Section 59)\n\nAttention: Site Compliance Officer / HR Manager\nWorker Name: ${workerProfile.name} (ID: ${workerProfile.workerId})\n\nTake notice that as per Section 59 of the Factories Act and State Minimum Wage notifications, overtime work exceeding standard shift hours must be remunerated at twice (2.0x) the ordinary rate of wages.\n\nThe October 2024 disbursement of ₹16,200 vs statutory entitlement of ₹18,500 reflects a short-payment of ₹2,300. We formally request review and rectification within 7 business days to maintain full statutory alignment.\n\nSubmitted respectfully,\n${workerProfile.name}\nVerified via PaySaathi Wage Intelligence Platform`
     },
     hi: {
@@ -51,7 +51,11 @@ export default function WorkerActionPage() {
   ];
 
   return (
-    <div className="pt-32 pb-32 min-h-screen bg-[#0A0A0B]">
+    <div className="pt-32 pb-32 min-h-screen bg-[#070B14] relative overflow-hidden">
+
+      {/* Background ambient glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#00F0FF]/15 via-[#10B981]/10 to-transparent rounded-full blur-[140px] pointer-events-none -z-10 animate-radial-breathe"></div>
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
         <SectionHeader
@@ -63,14 +67,14 @@ export default function WorkerActionPage() {
         />
 
         {/* Configuration Card */}
-        <div className="glass-card rounded-[32px] p-6 sm:p-8 border border-white/[0.07] shadow-[0_25px_60px_rgba(0,0,0,0.9)] space-y-6">
+        <div className="glass-card rounded-[36px] p-6 sm:p-8 border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.95)] space-y-6">
           
           {/* Controls Bar */}
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 pb-6 border-b border-white/[0.07]">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 pb-6 border-b border-white/[0.08]">
             
             {/* Tone Selector */}
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#9A9AA3] block mb-2.5">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#94A3B8] block mb-2.5 font-mono">
                 1. Communication Tone
               </span>
               <div className="flex flex-wrap gap-2">
@@ -78,10 +82,10 @@ export default function WorkerActionPage() {
                   <button
                     key={id}
                     onClick={() => setTone(id)}
-                    className={`px-3.5 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer border ${
+                    className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer border ${
                       tone === id
-                        ? 'bg-[#E11D3C] text-white border-[#E11D3C] shadow-[0_0_12px_rgba(225,29,60,0.4)]'
-                        : 'bg-[#121214] text-[#9A9AA3] border-white/[0.08] hover:bg-[#1C1C1F] hover:text-[#F5F5F7]'
+                        ? 'bg-[#00F0FF] text-[#070B14] border-[#00F0FF] shadow-[0_0_15px_rgba(0,240,255,0.45)]'
+                        : 'bg-[#0A0F1D] text-[#94A3B8] border-white/[0.08] hover:bg-[#0F172A] hover:text-[#F8FAFC]'
                     }`}
                   >
                     {label}
@@ -92,18 +96,18 @@ export default function WorkerActionPage() {
 
             {/* Language Selector */}
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#9A9AA3] block mb-2.5">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#94A3B8] block mb-2.5 font-mono">
                 2. Output Language
               </span>
-              <div className="flex bg-[#121214] border border-white/[0.08] rounded-xl p-1 gap-1 text-xs">
+              <div className="flex bg-[#0A0F1D] border border-white/[0.08] rounded-xl p-1 gap-1 text-xs">
                 {LANGS.map(({ id, label }) => (
                   <button
                     key={id}
                     onClick={() => setActionLang(id)}
-                    className={`px-3.5 py-1.5 rounded-lg font-semibold transition-all cursor-pointer ${
+                    className={`px-3.5 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
                       actionLang === id
-                        ? 'bg-[#E11D3C] text-white'
-                        : 'text-[#9A9AA3] hover:text-[#F5F5F7]'
+                        ? 'bg-[#00F0FF] text-[#070B14]'
+                        : 'text-[#94A3B8] hover:text-[#F8FAFC]'
                     }`}
                   >
                     {label}
@@ -115,17 +119,17 @@ export default function WorkerActionPage() {
           </div>
 
           {/* Letter Draft Canvas */}
-          <div className="bg-[#0D0D0F] rounded-2xl p-6 border border-white/[0.06] space-y-4">
+          <div className="bg-[#0A0F1D] rounded-2xl p-6 border border-white/[0.06] space-y-4">
             
-            <div className="flex justify-between items-center pb-3 border-b border-white/[0.05]">
-              <div className="flex items-center gap-2 text-xs text-[#E11D3C] font-semibold">
+            <div className="flex justify-between items-center pb-3 border-b border-white/[0.06]">
+              <div className="flex items-center gap-2 text-xs text-[#00F0FF] font-bold">
                 <span className="material-symbols-outlined text-base">mail</span>
                 <span>Generated Draft Preview</span>
               </div>
               <AudioPlayer text={activeMessage} label="Listen Draft" />
             </div>
 
-            <pre className="text-xs sm:text-sm text-[#F5F5F7] font-mono whitespace-pre-wrap leading-relaxed">
+            <pre className="text-xs sm:text-sm text-[#F8FAFC] font-mono whitespace-pre-wrap leading-relaxed">
               {activeMessage}
             </pre>
 
@@ -164,8 +168,8 @@ export default function WorkerActionPage() {
             </Button>
           </div>
 
-          <div className="p-4 rounded-2xl bg-[#1A0A0D] border border-[#E11D3C]/20 text-xs text-[#9A9AA3]">
-            <strong className="text-[#F5F5F7] block mb-0.5">Empowerment Principle:</strong>
+          <div className="p-4 rounded-2xl bg-[#0F172A] border border-[#00F0FF]/20 text-xs text-[#94A3B8]">
+            <strong className="text-[#F8FAFC] block mb-0.5">Empowerment Principle:</strong>
             "Rules verify. AI explains. Humans decide." Our drafts provide clear factual grounds to help both workers and contractors reach swift, harmonious settlements.
           </div>
 
